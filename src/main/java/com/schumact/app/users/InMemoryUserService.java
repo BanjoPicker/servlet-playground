@@ -34,7 +34,6 @@ public class InMemoryUserService implements UserService {
   public synchronized void AddUser(String username, String password) {
     if (username == null
         || password == null
-        || password.length() < 8
         || usermap.get(username) != null) {
       return;
     } else {

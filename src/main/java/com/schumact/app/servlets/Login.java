@@ -16,12 +16,13 @@ public class Login extends HttpServlet {
 		String password = request.getParameter(PARAM_PASSWORD);
 		String email = request.getParameter(PARAM_EMAIL);
 	
+    System.out.println("trying to authenticate " + username + "," + password + "," + email);
+
 		if (us.Authenticate(username, password)) {
 			request.getSession(true).setAttribute(PARAM_USERNAME, username);
 			System.out.println("Dude, you authenticated as " + username + "!");
 			App.User.Builder builder = App.User.newBuilder();
-			App.User user = builder.setEmail(email)
-					               .setPassword(password)
+			App.User user = builder.setPassword(password)
 					               .setUsername(username)
 					               .build();
 			request.getSession(true).setAttribute(PARAM_USER, user);
@@ -31,11 +32,15 @@ public class Login extends HttpServlet {
 				// our job is done here, so let's send back a redirect to index.jsp
 				response.sendRedirect(response.encodeRedirectURL(sc.getContextPath() + "/index.jsp"));
 				//sc.getRequestDispatcher("/index.jsp").forward(request, response);
-			} catch(Throwable t) {}
+			} catch(Throwable t) {
+        System.out.println("oops " + t);
+      }
 		} else {
 			try {
 				response.sendRedirect(response.encodeRedirectURL(sc.getContextPath() + "/login.jsp"));
-			} catch (Throwable t) {}
+			} catch (Throwable t) {
+        System.out.println("oops 2 " + t);
+      }
 		}
  	}
 	

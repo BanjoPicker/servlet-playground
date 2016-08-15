@@ -15,6 +15,7 @@
     <tags:navigation/>
 
 	  <div class="main-body">
+      Welcome, ${empty sessionScope.username ? "guest" : sessionScope.username}
 		  <ul>
 			  <li>My <a href="http://www.github.com/BanjoPicker">github</a> account.</li>
 			  <li>My <a href="https://bitbucket.com/schumact">bitbucket</a> account.</li>

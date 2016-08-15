@@ -38,6 +38,9 @@ public final class LoginFilter implements Filter {
 			  || http_req.getRequestURI().startsWith(contextpath + "/images/")
 			  || http_req.getRequestURI().startsWith(contextpath + "/js/")
 		    || allowedUrls.contains(http_req.getRequestURI())) {
+      if (fc == null) {
+        System.out.println("filter chain is null...");
+      }
 			fc.doFilter(request, response);
 		} else {
 			session.getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);

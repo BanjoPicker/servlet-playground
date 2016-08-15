@@ -19,6 +19,8 @@ public final class ContextListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		ServletContext sc = sce.getServletContext();
-		sc.setAttribute(UserService.APPLICATION_KEY, new InMemoryUserService());
+    UserService us = new InMemoryUserService();
+		sc.setAttribute(UserService.APPLICATION_KEY, us);
+		sc.setAttribute("us", us); 
 	}
 }
