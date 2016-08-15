@@ -1,0 +1,7 @@
+package com.schumact.app;
+
+message User {
+  optional string username = 1;
+  optional string password = 2;
+  optional string email = 3;
+}

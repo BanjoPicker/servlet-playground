@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+  <description>A tag library with misc utility functions.</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>UtilFunctionLibrary</short-name>
+  <uri>http://schumact.com/taglibs/util.tld</uri>
+
+  <!-- Simple function to test if a string is empty or not -->
+  <function>
+    <name>empty</name>
+    <function-class>com.schumact.app.el.Functions</function-class>
+    <function-signature>boolean empty(java.lang.String)</function-signature>
+  </function>
+
+  <function>
+    <name>getenv</name>
+    <function-class>com.schumact.app.el.Functions</function-class>
+    <function-signature>java.lang.String getenv(java.lang.String)</function-signature>
+  </function>
+
+  <function>
+    <name>envvars</name>
+    <function-class>com.schumact.app.el.Functions</function-class>
+    <function-signature>java.util.List envvars()</function-signature>
+  </function>
+
+  <function>
+    <name>sort</name>
+    <function-class>com.schumact.app.el.Functions</function-class>
+    <function-signature>java.util.List sort(java.util.List)</function-signature>
+  </function>
+</taglib>
