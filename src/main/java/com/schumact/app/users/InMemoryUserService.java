@@ -27,7 +27,7 @@ public class InMemoryUserService implements UserService {
     HashFunction hf = Hashing.sha512();
     HashCode hc = hf.newHasher().putString(username, Charsets.UTF_8).hash();
     HashCode hc2 = hf.newHasher().putString(password, Charsets.UTF_8).hash();
-	return(hc.toString() + hc2.toString()); 
+	  return(hc.toString() + hc2.toString()); 
   }
 
   @Override
@@ -51,6 +51,7 @@ public class InMemoryUserService implements UserService {
     return result;
   }
   
+  @Override
   public synchronized boolean Authenticate(String username, String password) {
 	  if (username == null || password == null) {
 		  return false;
