@@ -20,13 +20,16 @@ public class Register extends HttpServlet {
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		
+    System.out.println("Adding " + username);
 		us.AddUser(username, password);
 		
 		try {
 			response.sendRedirect(response.encodeRedirectURL(sc.getContextPath() + "/login.jsp"));
 			//sc.getRequestDispatcher("/login.jsp").forward(request, response);
 		}
-		catch(IOException ioe) { }
+		catch(IOException ioe) {
+      System.out.println("failed to register.... " + ioe);
+    }
 	}
 	
 	public static final long serialVersionUID = 1822968520592227808L;
