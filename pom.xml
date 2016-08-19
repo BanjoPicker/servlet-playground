@@ -56,15 +56,15 @@
     <!-- Guava is a general purpose library that contains string processing utils,
          collection utils, caches, hashing utils among many other things. -->
     <dependency>
-	    <groupId>com.google.guava</groupId>
-	    <artifactId>guava</artifactId>
-	    <version>18.0</version>
-	  </dependency>
+	  <groupId>com.google.guava</groupId>
+	  <artifactId>guava</artifactId>
+	  <version>19.0</version>
+	</dependency>
 
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-server</artifactId>
-			<version>1.18.1</version>
+	<dependency>
+	  <groupId>com.sun.jersey</groupId>
+	  <artifactId>jersey-server</artifactId>
+	  <version>1.19.1</version>
     </dependency>
 
     <dependency>
@@ -77,6 +77,12 @@
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
       <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.11.8</version>
     </dependency>
   </dependencies>
 
