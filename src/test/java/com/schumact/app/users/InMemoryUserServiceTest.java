@@ -14,4 +14,13 @@ public final class InMemoryUserServiceTest {
     String hello = "hello world!";
     assertThat(hello).isEqualTo("hello world!");
   }
+
+  @Test
+  public void testBasicFunctionality() {
+    InMemoryUserService userService = new InMemoryUserService();
+
+    userService.AddUser("testUser", "password");
+    assertThat(userService.Authenticate("testUser", "wrong")).isEqualTo(false);
+    assertThat(userService.Authenticate("testUser", "password")).isEqualTo(true);
+  }
 }
