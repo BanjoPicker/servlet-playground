@@ -1,17 +1,17 @@
 <project>
-	<name>Timothy Schumacher's public_html</name>
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>tschumacher</groupId>
-	<artifactId>public_html</artifactId>
-	<version>1.0</version>
-	<packaging>war</packaging>
+  <name>Timothy Schumacher's public_html</name>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tschumacher</groupId>
+  <artifactId>public_html</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
 
-	<properties>
-	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
+  </properties>
 
-	<dependencies>
+  <dependencies>
     <!-- Depend on the basic servlet/jsp apis that are provided by
          the tomcat container at runtime. The servlet API lets us
          write servlets and have context listeners etc, while the
